@@ -34,7 +34,7 @@ def print_results(model, test_generator, validate_generator=None):
                          index=test_generator.class_indices.keys(), columns=test_generator.class_indices.keys())
 
     plt.figure(figsize=(10, 7))
-    sn.heatmap(df_cm, fmt="g", annot=True, cbar=False, cmap=sn.dark_palette("#ffd000", reverse=True, as_cmap=True))
+    sn.heatmap(df_cm, fmt="g", annot=True, cmap=sn.dark_palette("#ffd000", reverse=True, as_cmap=True))
     plt.title(f"Confusion matrix of bee/wasp classification on {title} data")
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")
